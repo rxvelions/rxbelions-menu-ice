@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>DOX TOOL - Acceso Avanzado</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      padding: 20px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px #0f0;
+    }
+
+    .menu {
+      border: 1px solid #00ff00;
+      padding: 15px;
+      max-width: 600px;
+      margin: auto;
+      background-color: #001100;
+    }
+
+    .option {
+      margin: 10px 0;
+      cursor: pointer;
+      padding: 5px;
+      transition: background 0.2s;
+    }
+
+    .option:hover {
+      background-color: #002200;
+    }
+
+    #console {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #000;
+      border: 1px solid #00ff00;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 150px;
+      white-space: pre-wrap;
+      overflow-y: auto;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 30px;
+      color: #007700;
+    }
+  </style>
+</head>
+<body>
+
+<div class="title">
+  === DOX TOOL // PANEL DE CONTROL ===
+</div>
+
+<div class="menu">
+  <div class="option" onclick="runFake('Identidad digital')">[01] Escanear identidad digital</div>
+  <div class="option" onclick="runFake('Ubicación GPS')">[02] Rastrear ubicación GPS</div>
+  <div class="option" onclick="runFake('Red social')">[03] Extraer datos de redes sociales</div>
+  <div class="option" onclick="runFake('Historial llamadas')">[04] Obtener historial de llamadas</div>
+  <div class="option" onclick="runFake('Cámara remota')">[05] Acceso a cámara remota</div>
+  <div class="option" onclick="runFake('Credenciales')">[06] Descargar contraseñas guardadas</div>
+</div>
+
+<div id="console">
+> Esperando comando...
+</div>
+
+<div class="footer">
+Sesión establecida en nodo oculto | root@proxy-07 | shell: stealth_ops.sh
+</div>
+
+<script>
+  function runFake(nombre) {
+    const consoleBox = document.getElementById("console");
+    consoleBox.innerText = `> Ejecutando módulo: ${nombre}.dll\nConectando con servidor...\nDescifrando datos...\nAccediendo al sistema remoto...\n`;
+
+    setTimeout(() => {
+      consoleBox.innerText += "\n[ERROR ⚠] Esta herramienta no funciona realmente...\n>> anda a laburar payasin 🗣🗣";
+    }, 3000);
+  }
+</script>
+
+</body>
+</html>
